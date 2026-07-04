@@ -3,10 +3,10 @@ name: CI Pipeline                         #nombre visible en la pestaña Actions
 on:                                       # eventos que dispara el workflow
 
   push:                                   #cuando alguien hace push
-    branches: [ main ]                    #...a la rama main
+    branches: [ master ]                    #...a la rama main
   
   pull_request:                           #cuando alguien hace pull request(pr)
-    branches: [ main ]                    #... a la rama main
+    branches: [ master ]                    #... a la rama main
   
   workflow_dispatch:                      # permite ejecucion manual desde la UI
 
@@ -15,7 +15,7 @@ jobs:                                     #aca van todos los jobs
 
   run-test:                               # nombre del job
     name: Run Tests                       
-    runs-on : ubuntu-latest               # tipo de runner (maquina virtual)
+    runs-on: ubuntu-latest               # tipo de runner (maquina virtual)
 
     steps:                                # pasos en orden secuencial
       - name: Checkout Code               
