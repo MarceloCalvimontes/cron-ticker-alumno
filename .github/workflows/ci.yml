@@ -8,18 +8,18 @@ on:                                       # eventos que dispara el workflow
   pull_request:                           #cuando alguien hace pull request(pr)
     branches: [ main ]                    #... a la rama main
   
-  workflow_dispatch:                      #permite ejecucion manual desde la UI
+  workflow_dispatch:                      # permite ejecucion manual desde la UI
 
 
 jobs:                                     #aca van todos los jobs
 
-  run-test:                               #nombre del job
+  run-test:                               # nombre del job
     name: Run Tests                       
     runs-on : ubuntu-latest               # tipo de runner (maquina virtual)
 
-    steps:                                #pasos en orden secuencial
+    steps:                                # pasos en orden secuencial
       - name: Checkout Code               
-        uses: actions/checkout@v4         #clona el repo en el runner
+        uses: actions/checkout@v4         # clona el repo en el runner
       
       - name: Setup Node.js
         uses: actions/setup-node@v4         #instala NOde en el runner
